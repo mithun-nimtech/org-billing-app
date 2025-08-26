@@ -327,5 +327,4 @@ function ResponsiveStyledForm() {
     </Box>
   );
 }
-
 export default ResponsiveStyledForm;
