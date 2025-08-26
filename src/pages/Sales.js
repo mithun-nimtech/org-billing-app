@@ -11,7 +11,7 @@ const getIcon = (src) => (
 
 const salesActions = [
   { label: "Create Quick Sales", icon: getIcon("https://img.icons8.com/color/48/box.png") },
-  { label: "Create Detailed Invoice", icon: getIcon("https://img.icons8.com/color/48/table.png") },
+  { label: "create Detailed Invoice", icon: getIcon("https://img.icons8.com/color/48/table.png") },
   { label: "Invoices List", icon: getIcon("https://img.icons8.com/color/48/list.png") },
   { label: "Create Sales Order", icon: getIcon("https://img.icons8.com/color/48/order-history.png") },
   { label: "Sales Order List", icon: getIcon("https://img.icons8.com/color/48/bill.png") },
