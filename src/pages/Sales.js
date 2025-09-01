@@ -11,7 +11,11 @@ const getIcon = (src) => (
 
 const salesActions = [
   { label: "Create Quick Sales", icon: getIcon("https://img.icons8.com/color/48/box.png") },
+<<<<<<< HEAD
   { label: "Createeee Detailed Invoice", icon: getIcon("https://img.icons8.com/color/48/table.png") },
+=======
+  { label: "createeeee Detailed Invoice", icon: getIcon("https://img.icons8.com/color/48/table.png") },
+>>>>>>> 27bcebafe (local bill)
   { label: "Invoices List", icon: getIcon("https://img.icons8.com/color/48/list.png") },
   { label: "Create Sales Order", icon: getIcon("https://img.icons8.com/color/48/order-history.png") },
   { label: "Sales Order List", icon: getIcon("https://img.icons8.com/color/48/bill.png") },
