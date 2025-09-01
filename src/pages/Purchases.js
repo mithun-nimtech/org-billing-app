@@ -7,9 +7,9 @@ import {
   Grid,
   Paper,
   Avatar,
-  Button,
   useTheme,
-  useMediaQuery
+  useMediaQuery,
+  Link,
 } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -49,10 +49,21 @@ const Purchases = () => {
 
   return (
     <Box sx={{ p: isMobile ? 2 : 4, bgcolor: "#f7fafd", minHeight: "100vh" }}>
-      <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
-        Supplier Billing Area
-      </Typography>
+      {/* Top Navbar */}
+      <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 3 }}>
+        <Typography variant="h6" sx={{ fontWeight: 600 }}>
+          Supplier Billing Area
+        </Typography>
+        <Box>
+          <Link href="#" sx={{ mx: 1 }}>Purchase Orders</Link>
+          <Link href="#" sx={{ mx: 1 }}>Vendor Proposals</Link>
+          <Link href="#" sx={{ mx: 1 }}>Vendors</Link>
+          <Link href="#" sx={{ mx: 1 }}>Contacts/Addresses</Link>
+          <Link href="#" sx={{ mx: 1 }}>Invoices</Link>
+        </Box>
+      </Box>
 
+      {/* Tabs */}
       <Tabs
         value={tabIndex}
         onChange={handleTabChange}
@@ -66,6 +77,7 @@ const Purchases = () => {
         <Tab label="Dashboard" />
       </Tabs>
 
+      {/* Payable Area */}
       {tabIndex === 0 && (
         <>
           <Typography variant="subtitle1" sx={{ fontWeight: 500, mb: 2 }}>
@@ -82,21 +94,22 @@ const Purchases = () => {
             ))}
           </Grid>
 
+          {/* Settings */}
           <Typography variant="subtitle1" sx={{ fontWeight: 500, mb: 2 }}>
             Settings
           </Typography>
           <Box sx={{ display: "flex", alignItems: "center", mb: 4 }}>
             <Avatar sx={{ mr: 2, bgcolor: "#1976d2" }}>V</Avatar>
-            <Typography>Vendors tags/categories</Typography>
+            <Typography>Vendors - Tags/Categories</Typography>
           </Box>
 
+          {/* Statistics */}
           <Grid container spacing={3}>
             <Grid item xs={12} md={6} lg={5}>
               <Paper elevation={2} sx={{ p: 3, textAlign: "center" }}>
                 <Typography variant="subtitle2" fontWeight={600} sx={{ mb: 2 }}>
                   Statistics - Vendor Invoice
                 </Typography>
-                {/* Placeholder for chart, replace with your chart component */}
                 <DonutLargeIcon sx={{ fontSize: 120, color: "primary.light" }} />
                 <Box sx={{ display: "flex", justifyContent: "center", mt: 1 }}>
                   <Box sx={{ mx: 1, color: "#e3f2fd" }}>■ Draft</Box>
@@ -112,7 +125,6 @@ const Purchases = () => {
                 <Typography variant="subtitle2" fontWeight={600} sx={{ mb: 2 }}>
                   Total
                 </Typography>
-                {/* Example total progress bar */}
                 <Box sx={{ bgcolor: "#e3f2fd", borderRadius: 2, p: 1 }}>
                   <Box
                     sx={{
@@ -145,17 +157,29 @@ const Purchases = () => {
         </>
       )}
 
+      {/* Reports */}
       {tabIndex === 1 && (
         <Box>
-          <Typography>Reports content goes here</Typography>
-          {/* Add your reports UI */}
+          <Typography variant="subtitle1" sx={{ fontWeight: 500, mb: 2 }}>
+            Reports
+          </Typography>
+          <Grid container spacing={3}>
+            {reportsActions.map(({ label, icon }) => (
+              <Grid item xs={6} sm={4} md={3} key={label} sx={{ textAlign: "center" }}>
+                {icon}
+                <Typography variant="caption" sx={{ mt: 1, display: "block" }}>
+                  {label}
+                </Typography>
+              </Grid>
+            ))}
+          </Grid>
         </Box>
       )}
 
+      {/* Dashboard */}
       {tabIndex === 2 && (
         <Box>
           <Typography>Dashboard content goes here</Typography>
-          {/* Add your dashboard UI */}
         </Box>
       )}
     </Box>

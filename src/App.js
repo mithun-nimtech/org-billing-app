@@ -8,6 +8,7 @@ import Purchases from "./pages/Purchases";
 import NewInvoice from "./pages/NewInvoice";
 import NewSalesOrder from "./pages/NewSalesOrder";
 import { Box, Toolbar } from "@mui/material";
+// import Purchases from "./pages/Purchases";
 
 const drawerWidth = 220;
 const HEADER_HEIGHT = 64;
@@ -54,8 +55,7 @@ function App() {
               padding: 3,
               height: `calc(100vh - ${HEADER_HEIGHT}px)`,
               overflowY: "auto",
-            }}
-          >
+            }}>
             <Toolbar /> {/* Space for fixed header */}
             <Routes>
               <Route path="/" element={<Home />} />
@@ -64,7 +64,7 @@ function App() {
               <Route path="/sales/create-detailed-invoice" element={<NewInvoice />} />
               <Route path="/sales/create-sales-order" element={<NewSalesOrder />} />
               <Route path="/zra" element={<Zra />} />
-              <Route path="/purchases" element={<Purchases />} />
+              <Route path="/Purchases" element={<Purchases/>} />
               <Route path="/products" element={<Products />} />
               <Route path="/warehouses" element={<Warehouses />} />
               <Route path="/projects" element={<Projects />} />
@@ -83,5 +83,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;
