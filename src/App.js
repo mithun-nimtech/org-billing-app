@@ -5,6 +5,8 @@ import Sidebar from "./components/Sidebar";
 import Sales from "./pages/Sales";
 import QuickSale from "./pages/QuickSale"; // Import the new QuickSale page
 import Purchases from "./pages/Purchases";
+import NewInvoice from "./pages/NewInvoice";
+import NewSalesOrder from "./pages/NewSalesOrder";
 import { Box, Toolbar } from "@mui/material";
 
 const drawerWidth = 220;
@@ -59,6 +61,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/sales" element={<Sales />} />
               <Route path="/sales/quick-sale" element={<QuickSale />} /> {/* New route */}
+              <Route path="/sales/create-detailed-invoice" element={<NewInvoice />} />
+              <Route path="/sales/create-sales-order" element={<NewSalesOrder />} />
               <Route path="/zra" element={<Zra />} />
               <Route path="/purchases" element={<Purchases />} />
               <Route path="/products" element={<Products />} />

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Button, Menu, MenuItem } from "@mui/material";
+import { Box, Typography, Button, Menu, MenuItem } from "@mui/material";
 
 function Header() {
   const dropdowns = [
@@ -63,14 +63,14 @@ function Header() {
         zIndex: 1300,
       }}
     >
-      {/* Left section: logo and hamburger menu */}
+      {/* Left: Logo and Hamburger */}
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
         <img src="/logo.png" alt="Logo" style={{ width: 40, height: 40 }} />
-        <Box sx={{ cursor: "pointer", fontSize: 24, lineHeight: 1 }}>
-          ☰
+        <Box sx={{ cursor: "pointer" }}>
+          <span style={{ fontSize: 24 }}>☰</span>
         </Box>
 
-        {/* Dropdown buttons */}
+        {/* Dropdown Buttons Row */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
           {dropdowns.map((dropdown, idx) => (
             <React.Fragment key={dropdown.label}>
@@ -112,8 +112,10 @@ function Header() {
         </Box>
       </Box>
 
-      {/* Right section: icons (replace with actual icons as needed) */}
+      {/* Right side icons (keep your existing icons here) */}
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        {/* Your existing header right icons here */}
+        {/* Example placeholders */}
         <span>🧮</span>
         <span>💡</span>
         <span>⚙️</span>
