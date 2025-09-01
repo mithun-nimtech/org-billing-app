@@ -1,0 +1,138 @@
+.page {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 12px 24px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+.nav-links a:hover {
+  color: #0077cc;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+}
+.tabs button {
+  padding: 8px 16px;
+  border: none;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tabs button.active {
+  background: #cce5ff;
+  color: #0056b3;
+  font-weight: bold;
+}
+
+/* Main layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 0 16px 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* Icon grid */
+.grid-icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+.icon-box {
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+.icon-box span {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.blue { background: #007bff; }
+.red { background: #dc3545; }
+.green { background: #28a745; }
+.orange { background: #fd7e14; }
+.yellow { background: #ffc107; }
+.purple { background: #6f42c1; }
+
+/* Chart section */
+.chart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.pie {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#cceeff 0% 25%, #0099ff 25% 55%, #004466 55% 90%, #9966cc 90% 100%);
+}
+.legend {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+.legend li {
+  margin: 6px 0;
+}
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.dot.blue { background: #cceeff; }
+.dot.lightblue { background: #0099ff; }
+.dot.darkblue { background: #004466; }
+.dot.purple { background: #9966cc; }
+
+/* Settings */
+.settings {
+  margin: 16px;
+}
+.settings-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
